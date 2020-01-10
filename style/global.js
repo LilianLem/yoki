@@ -6,9 +6,8 @@ export const globalStyle = StyleSheet.create({
   },
   header: {
     width: '100%',
-    paddingTop: 40,
     backgroundColor: 'lightseagreen',
-    height: 80,
+    height: 50,
     alignItems: 'center',
     justifyContent: 'center'
   },
