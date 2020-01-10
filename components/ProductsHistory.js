@@ -61,10 +61,12 @@ export default class ProductsHistory extends React.Component {
               {/* Ci-dessous : affiche les propriétés uniquement si les infos du produit existent. J'ai essayé de changer la couleur du texte en fonction de la valeur des propriétés via des opérateurs ternaires mais ça n'a pas fonctionné*/}
               <Text style={{marginTop: 10}} >CODE-BARRES : {this.state.productData.infos && this.state.productData.infos.barcode}</Text>
               <Text style={{marginTop: 10}} >GROUPE NOVA : {this.state.productData.infos && this.state.productData.infos.nova}</Text>
+              <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Code-barres :</Text> {this.state.productData.infos && this.state.productData.infos.barcode}</Text>
+              <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Groupe NOVA :</Text> {this.state.productData.infos && this.state.productData.infos.nova}</Text>
 
-              <Text style={{marginTop: 10}} >NUTRISCORE : {this.state.productData.infos && this.state.productData.infos.nutriscore}</Text>
-              <Text style={{marginTop: 10}} >INGREDIENTS : {this.state.productData.infos && this.state.productData.infos.ingredients}</Text>
-              <Text style={{marginTop: 10}} >QUANTITE : {this.state.productData.infos && this.state.productData.infos.quantity}</Text>
+              <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Nutri-score :</Text> {this.state.productData.infos && this.state.productData.infos.nutriscore.toUpperCase()}</Text>
+              <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Ingrédients :</Text> {this.state.productData.infos && this.state.productData.infos.ingredients}</Text>
+              <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Quantité :</Text> {this.state.productData.infos && this.state.productData.infos.quantity}</Text>
 
               {/* Essai de code-barres dynamique : le state du code-barres ne veut pas s'insérer en concaténation <Image style={{width: 113, height: 50}} source={{uri : 'https://barcode.tec-it.com/barcode.ashx?data=8000500037560&code=EAN13&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0'}} /> */}
 

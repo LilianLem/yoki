@@ -76,6 +76,7 @@ export default class App extends React.Component {
       date: new Date(),
       infos: {
         barcode: barcode,
+        image: scannedProduct.image_small_url,
         ingredients: scannedProduct.ingredients_text_fr,
         nutriscore: scannedProduct.nutriscore_grade,
         nova: scannedProduct.nova_group,
