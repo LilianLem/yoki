@@ -31,7 +31,11 @@ export default class App extends React.Component {
   handleScanPress = async () => {
     // this.setModalVisible(true);
 
-    await this._handleBarCodeRead({type: 'EAN', data: '8000500037560'});
+    // Initialisation d'une liste de code-barres pour proposer plusieurs articles à la place du scan par appareil photo
+    let barcodeList = ['3017620425035','3180950007360','3242272845850','7622400013935','8000500037560'];
+    let randomBarcode = barcodeList[Math.floor(Math.random() * barcodeList.length)];
+
+    await this._handleBarCodeRead({type: 'EAN', data: randomBarcode});
   }
 
   handleProductPress = async (id) => {
