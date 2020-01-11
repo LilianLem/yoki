@@ -38,6 +38,7 @@ export default class App extends React.Component {
     await this._handleBarCodeRead({type: 'EAN', data: randomBarcode});
   }
 
+  // Fonction non utilisée dans la configuration actuelle de l'application
   handleProductPress = async (id) => {
     // alert('Je clique sur un produit avec l\'id : ' + id);
 
@@ -49,6 +50,7 @@ export default class App extends React.Component {
       let response = await fetch(
           'http://fr.openfoodfacts.org/api/v0/produit/' + barcode + '.json'
       );
+      // La variable responseJson a été modifiée pour récupérer toute la réponse afin d'afficher le code-barres (situé en dehors de la key product)
       let responseJson = await response.json();
       return responseJson;
     } catch (error) {
@@ -66,7 +68,7 @@ export default class App extends React.Component {
     let scannedProduct = apiResponse.product;
     let barcode = apiResponse.code;
  
-    // scannedProduct.nutrient_levels = JSON.parse(scannedProduct.nutrient_levels);
+    // NON FONCTIONNEL | scannedProduct.nutrient_levels = JSON.parse(scannedProduct.nutrient_levels);
 
     let _products = this.state.products; // récupération de la liste actuelle
 
@@ -108,6 +110,7 @@ export default class App extends React.Component {
         <ScanButtonView handlePress={this.handleScanPress} />
         <ProductsHistory handlePress={this.handleProductPress} products={this.state.products} />
 
+        {/* Modal non utilisé dans la configuration actuelle de l'application */}
         <Modal
           animationType="slide"
           transparent={false}

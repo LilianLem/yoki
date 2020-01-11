@@ -24,7 +24,7 @@ export default class ProductsHistory extends React.Component {
 
     return (
       <>
-        {/* <ProductItem handlePress={this.props.handlePress} produit={produit} /> */}
+        {/* Le composant sur cette ligne a été désactivé pour se servir plus facilement du modal produit | <ProductItem handlePress={this.props.handlePress} produit={produit} /> */}
         <ScrollView style={homeStyle.scrollProductView}>
           {
            this.props.products.map(
@@ -32,6 +32,7 @@ export default class ProductsHistory extends React.Component {
                  return (
                     <TouchableOpacity
                       onPress={() => {
+                        {/* On affiche le modal produit et on met les données du produit dans le state utilisé dans le modal */}
                         this.setProductModalVisible(!this.state.productModalVisible);
                         this.setState({productData: produit});
                       }}
@@ -59,6 +60,7 @@ export default class ProductsHistory extends React.Component {
 
             <View style={{flex: 1,  alignItems: "center"}}>
               {/* Ci-dessous : affiche les propriétés uniquement si les infos du produit existent. J'ai essayé de changer la couleur du texte en fonction de la valeur des propriétés via des opérateurs ternaires mais ça n'a pas fonctionné*/}
+              {/* L'image ci-contre ne s'affiche pas malgré l'URL correct dans l'objet | {this.state.productData && (<Image style={{width: 200, height: 81}} source={{uri: this.state.productData.image}} />)} */}
               <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Code-barres :</Text> {this.state.productData.infos && this.state.productData.infos.barcode}</Text>
               <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Groupe NOVA :</Text> {this.state.productData.infos && this.state.productData.infos.nova}</Text>
 
