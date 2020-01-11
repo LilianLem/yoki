@@ -59,8 +59,6 @@ export default class ProductsHistory extends React.Component {
 
             <View style={{flex: 1,  alignItems: "center"}}>
               {/* Ci-dessous : affiche les propriétés uniquement si les infos du produit existent. J'ai essayé de changer la couleur du texte en fonction de la valeur des propriétés via des opérateurs ternaires mais ça n'a pas fonctionné*/}
-              <Text style={{marginTop: 10}} >CODE-BARRES : {this.state.productData.infos && this.state.productData.infos.barcode}</Text>
-              <Text style={{marginTop: 10}} >GROUPE NOVA : {this.state.productData.infos && this.state.productData.infos.nova}</Text>
               <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Code-barres :</Text> {this.state.productData.infos && this.state.productData.infos.barcode}</Text>
               <Text style={{marginTop: 10}} ><Text style={{textDecorationLine: 'underline'}}>Groupe NOVA :</Text> {this.state.productData.infos && this.state.productData.infos.nova}</Text>
 
