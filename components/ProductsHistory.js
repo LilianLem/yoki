@@ -83,14 +83,17 @@ export default class ProductsHistory extends React.Component {
               }}
               style={{
                 position: "absolute", 
-                backgroundColor: "lightblue", 
+                backgroundColor: "lightseagreen", 
                 width: "100%",
                 height: 70,
                 left: 0, 
-                bottom: 0}}>
+                bottom: 0,
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center"}}>
 
 
-                <Text>Hide Modal</Text>
+                <Text style={{color: 'white', fontSize: 16}} >Retour à la liste</Text>
             </TouchableOpacity>
           </View>
         </Modal>
